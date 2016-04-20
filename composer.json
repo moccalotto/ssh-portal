@@ -1,6 +1,5 @@
 {
     "name": "moccalotto/ssh-portal",
-    "type": "cli program",
     "description": "CLI program for easy SSH connect to servers",
     "keywords": ["cli", "ssh", "server", "hetzner", "digitalocean"],
     "require": {
@@ -19,5 +18,8 @@
         "psr-4": {
             "Moccalotto\\SshPortal\\": "src"
         }
-    }
+    },
+    "bin": [
+        "ssh-portal"
+    ]
 }
