@@ -1,0 +1,23 @@
+{
+    "name": "moccalotto/ssh-portal",
+    "type": "cli program",
+    "description": "CLI program for easy SSH connect to servers",
+    "keywords": ["cli", "ssh", "server", "hetzner", "digitalocean"],
+    "require": {
+        "php": "^7.0.0",
+        "symfony/console": "^3.0"
+    },
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kim Ravn Hansen",
+            "email": "moccalotto@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Moccalotto\\SshPortal\\": "src"
+        }
+    }
+}

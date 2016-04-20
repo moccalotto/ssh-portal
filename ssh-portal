@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+
+if (file_exists(__DIR__.'/../../autoload.php')) {
+    require __DIR__.'/../../autoload.php';
+} else {
+    require __DIR__.'/vendor/autoload.php';
+}
+
+// Initialize the app
+$app = new Application('SSH Portal', '0.3.3');
+
+// Add commands
+$commands = require 'src/commands.php';
+$app->addCommands($commands);
+
+
+// TODO
+// set the default command to SshConnectCommand  or ServerListCommand http://symfony.com/doc/current/components/console/changing_default_command.html
+//
+// Consider aliases/macros:
+//      Easily cat/tail the access_log, error_log or php.log on a given server.
+//      Easily print the firewall rules on a given server.
+//
+//      ssh-portal prac.dev monitor-http-log
+
+// run the app
+$app->run();
