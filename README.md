@@ -1,13 +1,17 @@
-# Portal
+# ssh-portal
 
 Fast and easy way to connect to one of your servers.
 
-Can connect to Hetzner and DigitalOcean to fetch lists of servers.
-
-Based on the name/ip/description of these servers, you can select and connect to them very easily
+ssh-portal makes it easy to keep a catalogue of all your servers and quickly connect to them.
 
 
 ## Installation
+
+Requirements: make sure that you have composer installed.
+
+We assume that you have a global compoaser installation,
+and that ~/.composer/vendor/bin is in your PATH variable.
+This is not a requirement, but it will make things a lot easier.
 
 First, install the program.
 
