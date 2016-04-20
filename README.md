@@ -38,7 +38,6 @@ return [
     // currently, DigitalOcean and Hetzner are supported.
     // You can also define hosts "on file" via the OnFile provider.
     'hosts' => [
-        /**
         [
             'vendor' => 'Hetzner',
             'name' => 'hetz-1',
@@ -62,11 +61,10 @@ return [
                     'address' => '123.123.123.123',
                     'username' => 'monkey',
                 ],
-                ...
+                /* ... */
             ],
-        ]
-        ...
-         */
+        ],
+        /* ... */
     ],
 ];
 ```
