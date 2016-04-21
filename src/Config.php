@@ -34,7 +34,7 @@ class Config extends Singletonian
 
         $config = is_file($this->file) ? require $this->file : [];
 
-        $this->config = array_replace($defaults, $config);
+        $this->config = array_replace_recursive($defaults, $config);
     }
 
     /**
