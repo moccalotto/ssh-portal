@@ -7,12 +7,13 @@ namespace Moccalotto\SshPortal\Commands;
 // * portal:reset-config
 
 return [
-    new PortalClearCacheCommand(),
-    new PortalResetConfigCommand(),
     new FileGetCommand(),
     new FileMonitorCommand(),
     new FilePrintCommand(),
     new FilePutCommand(),
+    new PortalClearCacheCommand(),
+    new PortalResetConfigCommand(),
+    new PortalShowConfigCommand(),
     new ServerInfoCommand(),
     new ServerListCommand(),
     new ServerPingCommand(),
