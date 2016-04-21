@@ -2,6 +2,8 @@
 
 namespace Moccalotto\SshPortal;
 
+use RuntimeException;
+
 class Http extends Singletonian
 {
     /**

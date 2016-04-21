@@ -2,6 +2,7 @@
 
 namespace Moccalotto\SshPortal\Commands;
 
+use RuntimeException;
 use Moccalotto\SshPortal\Terminal;
 use Moccalotto\SshPortal\ServerList;
 use Symfony\Component\Console\Command\Command;
