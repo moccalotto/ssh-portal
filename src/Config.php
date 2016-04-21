@@ -70,6 +70,14 @@ class Config extends Singletonian
     }
 
     /**
+     * Get the entire configuration
+     */
+    public function doAll()
+    {
+        return $this->config;
+    }
+
+    /**
      * Get config entry by dot notation
      *
      * @param string $key
