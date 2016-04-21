@@ -2,6 +2,10 @@
 
 namespace Moccalotto\SshPortal;
 
+/**
+ * Abstract class for creating singletons
+ * with easy static accessors.
+ */
 abstract class Singletonian
 {
     public static function instance()
