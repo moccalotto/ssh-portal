@@ -87,7 +87,12 @@ Now it's time to play around.
 
 ## How do I access the servers?
 
-ssh-portal assumes that you have an SSH key that is authorized by the server.
+It would be a good idea to use an SSH key that is authorized on your servers.
 Otherwise, you will be prompted for a password whenever you try to connect.
+You can use the `ssh-portal ssh:copy-id` command to install your ssh key on
+the remote host.
 
 Currently, we assume that you connect as root to all servers fetched from Hetzner and Digital Ocean.
+
+If you need to use a different username, then, for now, you'd have to hardcode the server info in the
+OnFile provider.
