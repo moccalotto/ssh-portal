@@ -5,11 +5,17 @@ return [
         'timeout' => 86400, // 24 hours
     ],
 
-    // here, you define your hosting vendors.
-    // currently, DigitalOcean and Hetzner are supported.
+    // Define your hosting vendor integrations here.
+    // Currently we support DigitalOcean and Hetzner.
+    // You can add your own: just give a FQCN in the 'vendor' field,
+    // make sure that your composer knows how to autoload it, and
+    // you should be good to go.
+    // HostingVendors SHOULD implement the Moccalotto\SshPortal\HostingVendors\HostingVendor interface,
+    // however, this is not strictly enforced yet.
+    //
     // You can also define hosts "on file" via the OnFile provider.
     'hosts' => [
-        /**
+        /*
         [
             'vendor' => 'Hetzner',
             'name' => 'hetz-1',
