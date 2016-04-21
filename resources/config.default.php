@@ -40,7 +40,7 @@ return [
     // Http client settings:
     // See http://php.net/manual/en/context.http.php
     'http' => [
-        'follow_location'=> true,
+        'follow_location'=> false,
         'max_redirects'=> 0,
         'user_agent'=> 'SshPortal',
         'timeout'=> 10
