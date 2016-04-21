@@ -2,7 +2,7 @@
 
 return [
     'cache' => [
-        'timeout' => 900, // 15 minutes.
+        'timeout' => 86400, // 24 hours
     ],
 
     // here, you define your hosting vendors.
