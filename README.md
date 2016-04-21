@@ -15,14 +15,14 @@ This is not a requirement, but it will make things a lot easier.
 
 First, install the program.
 
-```bash
+```shell
 $  composer global require moccalotto/ssh-portal
 ```
 
 
 Then configure it:
 
-```bash
+```shell
 $  ssh-portal portal:reset-config
 ```
 
@@ -73,13 +73,13 @@ return [
 
 See all the available commands here:
 
-```bash
+```shell
 $  ssh-portal list
 ```
 
 See all your servers here.
 
-```bash
+```shell
 $  ssh-portal server:list
 ```
 
