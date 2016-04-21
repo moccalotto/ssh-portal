@@ -50,7 +50,7 @@ class PortalResetConfigCommand extends Command
             return;
         }
 
-        copy(Config::defaultFile(), Config::file());
+        Config::resetConfig();
         $output->writeln('<info>Config reset</info>');
     }
 }
