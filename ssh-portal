@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+namespace Moccalotto\SshPortal;
+
 use Symfony\Component\Console\Application;
 
 if (file_exists(__DIR__.'/../../autoload.php')) {
@@ -12,10 +14,15 @@ if (file_exists(__DIR__.'/../../autoload.php')) {
 // Initialize the app
 $app = new Application('SSH Portal', '0.3.3');
 
-// Add commands
+// Add Core Commands
 $commands = require 'src/commands.php';
+
+// Add Custom Commands
 $app->addCommands($commands);
 
+foreach (Config::get('commands') as $fqcn) {
+    $app->add(new $fqcn);
+}
 
 // TODO
 // set the default command to SshConnectCommand  or ServerListCommand http://symfony.com/doc/current/components/console/changing_default_command.html

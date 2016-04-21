@@ -43,6 +43,17 @@ return [
          */
     ],
 
+    'commands' => [
+        // Here you can define all the other commands you wish to load.
+        // Remember to make sure that composer knows how to autoload them.
+
+        /*
+        'MyName\MyRepo\Commands\MyFirstCommand',
+        'MyName\MyRepo\Commands\MySecondCommand',
+        'SomeGuy\SomeRepo\SomeCommand',
+         */
+    ],
+
     // Http client settings:
     // See http://php.net/manual/en/context.http.php
     'http' => [
