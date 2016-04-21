@@ -5,7 +5,7 @@ namespace Moccalotto\SshPortal\HostingVendors;
 use Moccalotto\SshPortal\Http;
 use Moccalotto\SshPortal\Server;
 
-class DigitalOceanVendor
+class DigitalOceanVendor implements HostingVendor
 {
     public static function fetchServers(array $credentials)
     {
