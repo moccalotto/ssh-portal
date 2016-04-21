@@ -18,7 +18,7 @@ class OnFileVendor
             $results[] = new Server(
                 $server['name'],
                 $server['address'],
-                $server['username '] ?? 'root',
+                $server['username'] ?? 'root',
                 $vendor
             );
         }
