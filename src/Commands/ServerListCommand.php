@@ -37,7 +37,8 @@ class ServerListCommand extends Command
             $rows[] = [
                 $server->hostingVendor,
                 $server->name,
-                sprintf('%s@%s', $server->username, $server->address),
+                $server->username,
+                $server->address,
             ];
         }
 
@@ -57,7 +58,7 @@ class ServerListCommand extends Command
 
         $table = new Table($output);
 
-        $table->setHeaders(['Vendor', 'Name', 'Connection'])
+        $table->setHeaders(['Vendor', 'Name', 'User', 'Address'])
             ->setRows($this->serverRows($servers))
             ->render();
     }
