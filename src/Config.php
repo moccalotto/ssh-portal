@@ -27,7 +27,7 @@ class Config extends Singletonian
 
     protected function __construct()
     {
-        $this->defaultsFile = realpath('resources/config.default.php');
+        $this->defaultsFile = realpath(__DIR__ . '/../resources/config.default.php');
         $this->file = getenv('HOME').'/.ssh-portal.config.php';
 
         $defaults = require $this->defaultsFile;
