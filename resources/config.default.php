@@ -13,13 +13,13 @@ return [
         [
             'vendor' => 'Hetzner',
             'name' => 'hetz-1',
-            'user' => '',
-            'pass' => '',
+            'user' => getenv('HETZNER_API_USER'),
+            'pass' => getenv('HETZNER_API_PASS'),
         ],
         [
             'vendor' => 'DigitalOcean',
             'name' => 'digo-1',
-            'token' => '',
+            'token' => getenv('DIGO_API_TOKEN'),
         ],
         [
             'vendor' => 'OnFile',
