@@ -51,6 +51,7 @@ return [
     'https' => [
         'verify_peer'=> true,
         'verify_peer_name'=> true,
-        'allow_self_signed'=> false
+        'allow_self_signed'=> false,
+        'verify_depth' => 10,
     ]
 ];
