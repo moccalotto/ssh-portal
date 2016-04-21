@@ -24,7 +24,7 @@ class ServerListCommand extends Command
                 '*'
             )->addOption(
                 'refresh-cache',
-                null,
+                'r',
                 InputOption::VALUE_NONE,
                 'Clear the cache before fetching the server list'
             );
