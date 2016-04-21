@@ -38,7 +38,13 @@ return [
                 ],
                 ...
             ],
-        ]
+        ],
+        [
+            'vendor' => SumHostingProvider\ApiLibs\SumHostVender::class,
+            'name' => 'sumhost-1',
+            'token' => 'fwed9f93msv',
+            'user_id' => 'c93bdf95-3bc7-4370-aac9-c89bc089c89d',
+        ],
         ...
          */
     ],
