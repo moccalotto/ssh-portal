@@ -44,16 +44,6 @@ class Http extends Singletonian
 
         $response = file_get_contents($url, false, stream_context_create($context_options));
 
-        $http_header = $http_response_header[0];
-
-        // We must have a 2xx header.
-        if (!preg_match('#HTTP/\\d+\\.\\d+\\s+2\\d{2}#Ai', $http_header)) {
-            throw new RuntimeException(sprintf(
-                'Bad response from server: "%s"',
-                $http_header
-            ));
-        }
-
         return $response;
     }
 }
