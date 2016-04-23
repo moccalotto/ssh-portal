@@ -23,7 +23,7 @@ class ServerInfoCommand extends Command
                 'Name (or address) of the server'
             )->addOption(
                 'copy-ip',
-                null,
+                'c',
                 InputOption::VALUE_NONE,
                 'Copy the address of the server to pasteboard'
             );

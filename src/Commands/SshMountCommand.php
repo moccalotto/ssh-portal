@@ -35,7 +35,7 @@ class SshMountCommand extends Command
                 '/Volumes/[server-name]'
             )->addOption(
                 'open',
-                null,
+                'o',
                 InputOption::VALUE_NONE,
                 'Open the mount point after a successful mount'
             );

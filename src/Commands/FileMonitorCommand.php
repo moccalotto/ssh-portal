@@ -33,7 +33,7 @@ class FileMonitorCommand extends Command
                 '5'
             )->addOption(
                 'once',
-                null,
+                'o',
                 InputOption::VALUE_NONE,
                 'Should we only display the last few lines of the file and then exit?'
             );
