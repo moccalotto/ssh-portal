@@ -43,7 +43,7 @@ class FileGetCommand extends Command
         $output->writeln(sprintf('<info>Copying from remote to local</info>'));
 
         Terminal::execute(sprintf(
-            'rsync -a -h --delete  %s@%s:%s %s',
+            'rsync -a -h --progress --delete  %s@%s:%s %s',
             $server->username,
             $server->address,
             $sourcePath,

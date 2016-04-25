@@ -58,7 +58,7 @@ class FilePutCommand extends Command
         $output->writeln(sprintf('<info>Copying from local to remote</info>'));
 
         Terminal::execute(sprintf(
-            'rsync -a -h --delete %s %s@%s:%s',
+            'rsync -a -h --progress --delete %s %s@%s:%s',
             $sourcePath,
             $server->username,
             $server->address,
