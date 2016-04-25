@@ -23,6 +23,11 @@ class ServerListCommand extends Command
                 'Show only servers that match this pattern',
                 '*'
             )->addOption(
+                'hosts-file',
+                'H',
+                InputOption::VALUE_NONE,
+                'Print list in the format of a hosts file'
+            )->addOption(
                 'refresh-cache',
                 'r',
                 InputOption::VALUE_NONE,
@@ -30,9 +35,10 @@ class ServerListCommand extends Command
             );
     }
 
-    protected function serverRows($servers)
+    protected function renderAsTable(OutputInterface $output, array $servers)
     {
         $rows = [];
+
         foreach ($servers as $server) {
             $rows[] = [
                 $server->hostingVendor,
@@ -41,8 +47,29 @@ class ServerListCommand extends Command
                 $server->address,
             ];
         }
+        (new Table($output))
+            ->setHeaders(['DataCenter', 'Name', 'User', 'Address'])
+            ->setRows($rows)
+            ->render();
+    }
 
-        return $rows;
+    protected function renderAsHostsFile(OutputInterface $output, array $servers)
+    {
+        $rows = [];
+
+        foreach ($servers as $server) {
+            $rows[] = [
+                $server->address . '    ',
+                $server->name,
+                '## ' . $server->hostingVendor
+            ];
+        }
+
+        (new Table($output))
+            ->setStyle('compact')
+            ->setHeaders(['## IP', 'Name', 'DataCenter'])
+            ->setRows($rows)
+            ->render();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -56,10 +83,9 @@ class ServerListCommand extends Command
         // Fetch a single server.
         $servers = ServerList::fetchMatcing($input->getArgument('pattern'));
 
-        $table = new Table($output);
+        return $input->getOption('hosts-file')
+            ? $this->renderAsHostsFile($output, $servers)
+            : $this->renderAsTable($output, $servers);
 
-        $table->setHeaders(['Vendor', 'Name', 'User', 'Address'])
-            ->setRows($this->serverRows($servers))
-            ->render();
     }
 }
