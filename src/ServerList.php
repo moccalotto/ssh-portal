@@ -107,7 +107,7 @@ class ServerList extends Singletonian
 
     public function doFetchOne($pattern)
     {
-        $servers = $this->dofetchMatcing($pattern);
+        $servers = $this->doFetchMatcing($pattern);
 
         if (count($servers) === 0) {
             throw new RuntimeException(sprintf(
