@@ -76,7 +76,7 @@ class ServerListCommand extends Command
     {
         if ($input->getOption('refresh-cache')) {
             Cache::clear();
-            $output->writeln('<info>Cache refreshed</info>');
+            $output->writeln('<info>Cache cleared. Fetching server list</info>');
             $output->writeln('');
         }
 
