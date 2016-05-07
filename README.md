@@ -50,6 +50,13 @@ return [
             'token' => 'token-from-digo-backoffice',
         ],
         [
+            'vendor' => 'Uri',
+            'name' => 'from-json-file',
+            // uri can be anything support by php stream wrappers
+            // see http://php.net/manual/wrappers.php
+            'uri' => 'https://www.my-domain.tld/server-list.json',
+        ],
+        [
             'vendor' => 'OnFile',
             'name' => 'my-own-datacenter',
 
