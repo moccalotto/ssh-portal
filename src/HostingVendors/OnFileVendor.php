@@ -4,7 +4,7 @@ namespace Moccalotto\SshPortal\HostingVendors;
 
 use Moccalotto\SshPortal\Server;
 
-class OnFileVendor
+class OnFileVendor implements HostingVendor
 {
     public static function fetchServers(array $credentials)
     {
