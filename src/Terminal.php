@@ -11,13 +11,13 @@ class Terminal extends Singletonian
      */
     public function doExecute(string $command) : int
     {
-        $inpipes = [
+        $pipeDefinitions = [
             0 => ['file', 'php://stdin', 'r'],
             1 => ['file', 'php://stdout', 'w'],
             2 => ['file', 'php://stderr', 'w'],
         ];
 
-        $proc = proc_open($command, $inpipes, $outpipes);
+        $proc = proc_open($command, $pipeDefinitions, $streams);
 
         do {
             $status = proc_get_status($proc);
