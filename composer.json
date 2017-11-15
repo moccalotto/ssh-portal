@@ -4,7 +4,7 @@
     "keywords": ["cli", "ssh", "server", "hetzner", "digitalocean"],
     "require": {
         "php": "^7.0.0",
-        "symfony/console": "^2.8"
+        "symfony/console": ">=2.8"
     },
     "minimum-stability": "stable",
     "license": "MIT",
