@@ -86,6 +86,5 @@ class ServerListCommand extends Command
         return $input->getOption('hosts-file')
             ? $this->renderAsHostsFile($output, $servers)
             : $this->renderAsTable($output, $servers);
-
     }
 }
